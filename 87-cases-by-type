@@ -1,0 +1,13 @@
+public Map<String, List<Case>> casesByType(List<Case> cases) {
+    //code here
+    Map<String, List<Case>> typeToCases = new Map<String, List<Case>>();
+    for(Case record : cases){
+        if(String.isNotBlank(record.Type)){
+            if(!typeToCases.containsKey(record.Type)){
+                typeToCases.put(record.Type , new List<Case>());
+            }
+            typeToCases.get(record.Type).add(record);
+        }
+    }
+    return typeToCases;
+}
