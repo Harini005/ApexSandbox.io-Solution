@@ -1,0 +1,9 @@
+public Boolean isPalindrome(String str){
+//code here
+List<String> splittedString = str.split('');
+if(str == String.join(splittedString,'')){
+    return true;
+} 
+return false;
+
+}
