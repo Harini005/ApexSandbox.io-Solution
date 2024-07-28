@@ -1,0 +1,8 @@
+public static Integer arraySum(List<Integer> numbers) {
+    //code here
+    Integer result = 0;
+    for(Integer value : numbers){
+        result += value;
+    }
+    return result;
+}
