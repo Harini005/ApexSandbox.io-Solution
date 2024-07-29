@@ -5,13 +5,13 @@ public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean p
     };
 
     if(passedExam){
-        booleanToExam.get(true).add(passedExam);
+        booleanToExam.get(true).add('passedExam');
     }
     if(passedAssignments){
-        booleanToExam.get(true).add(passedAssignments);
+        booleanToExam.get(true).add('passedAssignments');
     }
     if(passedProject){
-        booleanToExam.get(true).add(passedProject);
+        booleanToExam.get(true).add('passedProject');
     }
 
     return booleanToExam.get(true).size() >=2 ? true : false;
