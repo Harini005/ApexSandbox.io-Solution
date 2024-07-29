@@ -1,6 +1,6 @@
 public Integer findTargetCount(List<Integer> nums, Integer target) {
     // code here
-    public Integer occurance = 0;
+    Integer occurance = 0;
     for(Integer value : nums){
         if(value == target){
             occurance++;
