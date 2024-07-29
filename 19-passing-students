@@ -1,6 +1,6 @@
 public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
     //code here
-    Map<Boolean , List<String>> booleanToExam = new Map<Boolean , List<String>{
+    Map<Boolean , List<String>> booleanToExam = new Map<Boolean , List<String>>{
         true => new List<String>()
     };
 
