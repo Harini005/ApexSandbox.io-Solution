@@ -3,8 +3,8 @@ public List<Integer> positiveIntegers(List<Integer> numbers) {
     List<Integer> result = new List<Integer>();
     for(Integer value : numbers){
         if(value>=0){
-            results.add(value);
+            result.add(value);
         }
     }
-    return Integer;
+    return result;
 }
