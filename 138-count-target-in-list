@@ -1,0 +1,11 @@
+public Integer findTargetCount(List<Integer> nums, Integer target) {
+    // code here
+    public static Integer occurance = 0;
+    for(Integer value : nums){
+        if(value == target){
+            occurance++;
+        }
+    }
+    return occurance;
+    
+}
