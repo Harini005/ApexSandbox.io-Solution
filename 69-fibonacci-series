@@ -1,0 +1,14 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    //code here
+    Integer primary = 0;
+    Integer secondary = 1;
+    List<Integer> result = new List<Integer>{secondary};
+    for(Integer i=0 ; i<n ;i++){
+        Integer value = primary+secondary;
+        primary = secondary;
+        secondary = value;
+        result.add(value);
+    }
+    return result;
+
+}
