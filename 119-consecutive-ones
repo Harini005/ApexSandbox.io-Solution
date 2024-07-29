@@ -1,0 +1,12 @@
+public Integer maxConsecutiveOnes(Integer[] numbers) {
+    //code here
+    Integer count =0 ;
+    for(Integer value : numbers){
+        if(value == 1){
+            count++;
+            continue;
+        }
+        count=0;
+    }
+    return count;
+}
