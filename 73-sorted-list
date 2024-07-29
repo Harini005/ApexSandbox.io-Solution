@@ -1,0 +1,9 @@
+public boolean isSorted(List<Integer> numbers) {
+    //code here
+    List<Integer> sortedAsc = numbers.sort();
+    List<Integer> sortedDesc = new List<Integer>();
+    for(Integer i=sortedAsc.size() ; i >0 ;i--){
+        sortedDesc.add(sortedAsc[i]);
+    }
+    return (numbers == sortedAsc || numbers == sortedDesc) ? true : false;
+}
