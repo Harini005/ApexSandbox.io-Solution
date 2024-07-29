@@ -1,0 +1,20 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    //code here
+    Map<Boolean , List<String>> booleanToExam = new Map<Boolean , List<String>{
+        true , new List<String>(),
+        false , new List<String>()
+    };
+
+    if(passedExam){
+        booleanToExam.get(true).add(passedExam);
+    }
+    if(passedAssignments){
+        booleanToExam.get(true).add(passedAssignments);
+    }
+    if(passedProject){
+        booleanToExam.get(true).add(passedProject);
+    }
+
+    return booleanToExam.get(true).size() >=2 ? true : false;
+
+}
