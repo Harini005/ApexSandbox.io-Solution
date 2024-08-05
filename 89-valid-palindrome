@@ -1,6 +1,7 @@
 public Boolean isPalindrome(String str){
 //code here
-List<String> splittedString = str.split('');
+String inputString = str.replaceAll(' ','');
+List<String> splittedString = str.replaceAll(' ','').split('');
 if(str == String.join(splittedString,'')){
     return true;
 } 
