@@ -3,7 +3,7 @@ public Id insertCourse(String name, String details, Integer credits) {
     List<Schema.PickListEntry> creditPickVals = apxio__Course__c.apxio__Credits__c.getDescribe().getPicklistValues();
     List<String> pickVals = new List<String>();
     for(Schema.PicklistEntry entry : creditPickVals){
-        pickVals.add(entry.getName());
+        pickVals.add(entry.getLabel());
     }
     if(!pickVals.contains(String.valueOf(credits))){
         return null;
