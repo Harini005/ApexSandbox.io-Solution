@@ -1,0 +1,16 @@
+public Id insertCourse(String name, String details, Integer credits) {
+    // code here
+    List<Schema.PickListEntry> creditPickVals = apxio__Course__c.apxio__Credits__c.getDescribe().getPicklistValues();
+    List<String> pickVals = new List<String>();
+    for(Schema.PicklistEntry entry : creditPickVals){
+        pickVals.add(entry.getName());
+    }
+    if(!pickVals.contains(String.valueOf(credits))){
+        return null;
+    }
+
+    apxio__Course__c course = new apxio__Course__c(Name=name , apxio__Course_Details__c = details ,apxio__Credits__c= String.valueOf(credits) );
+
+    insert   course;
+      return id;
+}
