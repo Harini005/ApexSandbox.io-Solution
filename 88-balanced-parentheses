@@ -1,0 +1,18 @@
+public Boolean isValid(String s){
+    //code here 
+    Map<String,String> braces = new Map<String.String>{
+        '{' => '}',
+        '[' => ']',
+        '(' => ')'
+    };
+    List<String> splittedBraces = s.split('');
+    List<String> clonedList = new List<String>(splittedBraces);
+    for(String brace : splittedBraces){
+        if(clonedList.contains(braces.get(brace))){
+            clonedList.remove(clonedList.indexOf(brace));
+            clonedList.remove(clonedList.indexOf(braces.get(brace)));
+        }
+    }
+
+    return clonedList.size() > 0 ? false : true;
+}
