@@ -4,7 +4,7 @@ public void defragging(Integer[] memory)
     for(Integer mem : memory){
         if(mem < 0){
             memory.add(mem,memory.size()-1);
-            memory.remove(indexOf(mem));
+            memory.remove(memory.indexOf(mem));
         }
     }
 }
