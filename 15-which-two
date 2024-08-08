@@ -1,0 +1,19 @@
+public String whichTwo(Integer a, Integer b, Integer c) {
+    //code here
+    List<Integer> numbers = new List<Integer>{a,b,c};
+    Map<Integer , String> integerMap = new Map<Integer , String>{0=>'a' , 1=>'b' , 2 => 'c'};
+    for(Integer i=0;i<numbers.size();i++){
+        Integer sum = 0 ;
+        for(Intger j =0 ;j<numbers.size();j++){
+            if(i==j){
+                continue;
+            }
+            sum += numbers[j];
+        }
+        if(sum == numbers[i]){
+          return integerMap.get(i);
+        }
+    }
+    return '';
+    
+}
