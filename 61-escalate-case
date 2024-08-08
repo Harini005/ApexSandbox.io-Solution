@@ -1,6 +1,6 @@
 public void escalateIfMeetsCriteria(Case c) {
     //code here
-    List<String> type = new List<String>{'Electrical' , 'Mechanical '};
+    List<String> type = new List<String>{'Electrical' , 'Mechanical'};
     if(type.contains(c.Type) && c.Reason == 'Breakdown' && c.Status == 'In Progress'){
         c.IsEscalated = true;
     }
