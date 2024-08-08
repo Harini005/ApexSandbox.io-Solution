@@ -4,7 +4,7 @@ public String whichTwo(Integer a, Integer b, Integer c) {
     Map<Integer , String> integerMap = new Map<Integer , String>{0=>'a' , 1=>'b' , 2 => 'c'};
     for(Integer i=0;i<numbers.size();i++){
         Integer sum = 0 ;
-        for(Intger j =0 ;j<numbers.size();j++){
+        for(Integer j =0 ;j<numbers.size();j++){
             if(i==j){
                 continue;
             }
