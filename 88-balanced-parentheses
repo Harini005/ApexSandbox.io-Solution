@@ -1,6 +1,6 @@
 public Boolean isValid(String s){
     //code here 
-    Map<String,String> braces = new Map<String.String>{
+    Map<String,String> braces = new Map<String,String>{
         '{' => '}',
         '[' => ']',
         '(' => ')'
