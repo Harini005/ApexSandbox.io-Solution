@@ -1,0 +1,4 @@
+public void escalateIfMeetsCriteria(Case c) {
+    //code here
+    update new Case(Id = c.Id , IsEscalated = true);
+}
