@@ -1,7 +1,7 @@
 public Boolean isSubSequence(String s1, String s2){
     //code here
     List<String> inputs1 = s1.split('');
-    String regexString = '';
+    String regexString = '[a-z]*';
     for(String input : inputs1){
         regexString +=input+'[a-z]*';
     }
