@@ -1,5 +1,8 @@
 public boolean isAnagram(String s1, String s2) {
     //Code here
+    if(String.isBlank(s1) && String.isBlank(s2)){
+        return false;
+    }
     List<String> splitteds1 = s1.split('');
     List<String> splitteds2= s2.split('');
 
