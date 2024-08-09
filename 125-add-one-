@@ -1,6 +1,6 @@
 public void plusOne(List<Integer> numbers) {
     // code here
- Long joinedValue = Long.valueOf(String.join(numbers,''));
+  float joinedValue = float.valueOf(String.join(numbers,''));
     joinedValue++;
     numbers.clear(); 
     for(String s : String.valueOf(joinedValue).split('')){
