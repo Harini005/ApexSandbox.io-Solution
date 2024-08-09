@@ -2,5 +2,8 @@ public void plusOne(List<Integer> numbers) {
     // code here
     Integer joinedValue = Integer.valueOf(String.join(numbers,''));
     joinedValue++;
-    numbers = Integer.valueOf(String.valueOf(joinedValue).split(''));
+    numbers = []; 
+    for(String s : String.valueOf(joinedValue).split('')){
+        numbers.add(Integer.valueOf(s));
+    }
 } 
