@@ -4,4 +4,3 @@ public void plusOne(List<Integer> numbers) {
     joinedValue++;
     numbers = String.valueOf(joinedValue).split('');
 } 
-}
