@@ -1,0 +1,16 @@
+public boolean isAnagram(String s1, String s2) {
+    //Code here
+    List<String> splitteds1 = s1.split('');
+    List<String> splitteds1Cloned = new List<String>(splitteds1);
+
+    for(String splittedString : splitteds1){
+        if(splitteds1Cloned.contains(splittedString)){
+            splitteds1Cloned.remove(splitteds1Cloned.indexOf(splittedString));
+        }
+        return false
+    }
+    if(splitteds1Cloned.size() > 0){
+        return false;
+    }
+    return true;
+}
