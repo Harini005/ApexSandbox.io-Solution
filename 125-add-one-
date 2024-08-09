@@ -1,6 +1,6 @@
 public void plusOne(List<Integer> numbers) {
     // code here
- Decimal joinedValue = Decimal.valueOf(String.join(numbers,''));
+ Double joinedValue = Double.valueOf(String.join(numbers,''));
     joinedValue++;
     numbers.clear(); 
     for(String s : String.valueOf(joinedValue).split('')){
