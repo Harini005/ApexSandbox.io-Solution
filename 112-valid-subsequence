@@ -1,0 +1,11 @@
+public Boolean isSubSequence(String s1, String s2){
+    //code here
+    List<String> inputs1 = s1.split('');
+    String regexString = '';
+    for(String input : inputs1){
+        regexString +=input+'*';
+    }
+    Pattern myPattern = Pattern.compile(regexString);
+    Matcher myMatcher = myPattern.matcher(s2);
+    return myMatcher.matches();
+}
