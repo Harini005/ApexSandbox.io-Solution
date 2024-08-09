@@ -1,0 +1,17 @@
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+     //code here
+     Set<Integer> numsLessThanTarget = Set<Integer>(); 
+     for(Integer num : nums){
+         if(num < target){
+             numsLessThanTarget.add(num);
+         }
+     }
+    Integer sum =0;
+     for(Integer num : numsLessThanTarget){
+         sum += num;
+         if(sum == target){
+             break;
+         }
+     }
+     return sum ==target ? true : false ;
+}
