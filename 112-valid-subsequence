@@ -3,7 +3,7 @@ public Boolean isSubSequence(String s1, String s2){
     List<String> inputs1 = s1.split('');
     String regexString = '';
     for(String input : inputs1){
-        regexString +=input+'*';
+        regexString +=input+'[a-z]*';
     }
     Pattern myPattern = Pattern.compile(regexString);
     Matcher myMatcher = myPattern.matcher(s2);
