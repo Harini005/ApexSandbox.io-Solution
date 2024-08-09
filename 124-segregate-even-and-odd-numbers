@@ -1,0 +1,19 @@
+public static void segregateEvenOdd(List<Integer> numbers){
+    //code here
+    List<Integer> evenList = new List<Integer>();
+    List<Integer> oddList = new List<Integer>();
+
+  for(Integer num : numbers){
+      if(Math.mod(num,2) == 0){
+         evenList.add(num); 
+      }
+      else{
+          oddList.add(num);
+      }
+  }
+  evenList.sort();
+  oddList.sort();
+  numbers.clear();
+  numbers.addAll(evenList);
+  numbers.addAll(oddList);
+}
