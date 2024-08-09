@@ -6,9 +6,11 @@ public boolean isAnagram(String s1, String s2) {
     for(String splitted : splitteds1){
         if(s2.contains(splitted)){
             splitteds2.remove(splitteds2.indexOf(splitted));
-            continue;
+            
         }
+        else{
         return false;
+        }
     }
     if(splitteds2.size() > 0){
         return false;
