@@ -5,7 +5,7 @@ public boolean isAnagram(String s1, String s2) {
 
     for(String splitted : splitteds1){
         if(s2.contains(splitted)){
-            clonedS1.remove(cloned.indexOf(splitted));
+            clonedS1.remove(clonedS1.indexOf(splitted));
         }
         return false;
     }
