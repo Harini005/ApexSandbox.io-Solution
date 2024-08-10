@@ -11,9 +11,6 @@ public Boolean isValid(String s){
             clonedList.remove(clonedList.indexOf(brace));
             clonedList.remove(clonedList.indexOf(braces.get(brace)));
         }
-        else{
-            return false;
-        }
     }
 
     return clonedList.size() > 0 ? false : true;
