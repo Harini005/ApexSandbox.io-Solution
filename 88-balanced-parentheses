@@ -1,5 +1,4 @@
 public Boolean isValid(String s){
-    //code here 
     Map<String,String> braces = new Map<String,String>{
         '{' => '}',
         '[' => ']',
@@ -11,6 +10,9 @@ public Boolean isValid(String s){
         if(clonedList.contains(braces.get(brace))){
             clonedList.remove(clonedList.indexOf(brace));
             clonedList.remove(clonedList.indexOf(braces.get(brace)));
+        }
+        else{
+            return false;
         }
     }
 
