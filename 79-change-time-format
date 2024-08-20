@@ -1,28 +1,31 @@
 public String changeTimeFormat(String strTime) {
     //code here
-  List<String> timeStamps = strTime.split(':');
+     List<String> timeStamps = strTime.split(':');
     String hours = timeStamps[0];
     String formattedTime ='';
     Integer hoursValue = Integer.valueOf(timeStamps[0]);
-
-    if(hoursValue == 0){
+    
+    if(hoursValue == 0)
+    {
         timeStamps[0] = String.valueOf(hoursValue+12);
         hours = timeStamps[0];
         formattedTime = String.format('{0}:{1} AM' , new List<String>{hours,timeStamps[1]});
         return formattedTime;
-    } 
-    
-    if(hoursValue == 12 ){
+    }
+            
+    if(hoursValue == 12 )
+    {
         return strTime+' PM';
     }
-
-    if(hoursValue > 12 ){
+            
+    if(hoursValue > 12 )
+    {
         hoursValue = hoursValue-12;
         timeStamps[0] = hoursValue < 10 ? ('0'+String.valueOf(hoursValue)) : String.valueOf(hoursValue);
         hours = timeStamps[0];
         formattedTime = String.format('{0}:{1} PM' , new List<String>{hours,timeStamps[1]});
         return formattedTime;
     }
-    
-	return strTime+' AM'; 
+                    
+    return strTime+' AM';
 }
