@@ -10,7 +10,7 @@ public String changeTimeFormat(String strTime) {
         return formattedTime;
     }
     if(Integer.valueOf(values[0]) == 12){
-        return strTime+' PM'
+        return strTime+' PM';
     }
     if(Integer.valueOf(values[0]) > 12 ){
         values[0] = String.valueOf('0'+''+Integer.valueOf(values[0])-12);
