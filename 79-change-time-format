@@ -1,24 +1,26 @@
 public String changeTimeFormat(String strTime) {
     //code here
-   List<String> values = strTime.split(':');
-    String hours = values[0];
+  List<String> timeStamps = strTime.split(':');
+    String hours = timeStamps[0];
     String formattedTime ='';
-    if(Integer.valueOf(Values[0]) == 0){
-        values[0] = String.valueOf(Integer.valueOf(values[0])+12);
-        hours = values[0];
-        formattedTime = hours+':'+values[1]+' AM';
+    Integer hoursValue = Integer.valueOf(timeStamps[0]);
+
+    if(hoursValue == 0){
+        timeStamps[0] = String.valueOf(hoursValue+12);
+        hours = timeStamps[0];
+        formattedTime = String.format('{0}:{1} AM' , new List<String>{hours,timeStamps[1]});
         return formattedTime;
     } 
-    if(Integer.valueOf(values[0]) == 12 ){
+    
+    if(hoursValue == 12 ){
         return strTime+' PM';
     }
 
-    if(Integer.valueOf(values[0]) > 12 ){
-      //  values[0] = '0'+String.valueOf(Integer.valueOf(values[0])-12);
-        Integer hoursValue = Integer.valueOf(values[0])-12;
-        values[0] = hoursValue < 10 ? ('0'+String.valueOf(hoursValue)) : String.valueOf(hoursValue);
-        hours = values[0];
-        formattedTime = hours+':'+values[1]+' PM';
+    if(hoursValue > 12 ){
+        hoursValue = hoursValue-12;
+        timeStamps[0] = hoursValue < 10 ? ('0'+String.valueOf(hoursValue)) : String.valueOf(hoursValue);
+        hours = timeStamps[0];
+        formattedTime = String.format('{0}:{1} PM' , new List<String>{hours,timeStamps[1]});
         return formattedTime;
     }
     
