@@ -1,6 +1,6 @@
 public Boolean duplicateContacts(Contact c1, Contact c2) {
     //code here
-    if(String.isBlank(c1.email)){
+    if(String.isBlank(c1.email) ||  String.isBlank(c2.email) || String.isBlank(c1.Phone) || String.isBlank(c2.phone)){
         return false;
     }
     if(c1.email.equalsIgnoreCase(c2.email)  ||c1.Phone == c2.phone){
