@@ -1,0 +1,20 @@
+public String changeTimeFormat(String strTime) {
+    //code here
+   List<String> values = strTime.split(':');
+    String hours = values[0];
+    String formattedTime ='';
+    if(Integer.valueOf(Values[0]) == 0){
+        values[0] = String.valueOf(Integer.valueOf(values[0])+12);
+        hours = values[0];
+        formattedTime = hours+':'+values[1]+' AM';
+        return formattedTime;
+    }
+    if(Integer.valueOf(values[0]) > 12 ){
+        values[0] = String.valueOf(Integer.valueOf(values[0])-12);
+        hours = values[0];
+        formattedTime = hours+':'+values[1]+' PM';
+        return formattedTime;
+    }
+    
+	return strTime+' AM'; 
+}
