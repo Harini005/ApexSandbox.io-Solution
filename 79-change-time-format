@@ -9,6 +9,9 @@ public String changeTimeFormat(String strTime) {
         formattedTime = hours+':'+values[1]+' AM';
         return formattedTime;
     } 
+    if(Integer.valueOf(values[0]) == 12 ){
+        return strTime+' PM';
+    }
 
     if(Integer.valueOf(values[0]) > 12 ){
         values[0] = '0'+String.valueOf(Integer.valueOf(values[0])-12);
