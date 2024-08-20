@@ -14,7 +14,7 @@ public String changeTimeFormat(String strTime) {
     }
 
     if(Integer.valueOf(values[0]) > 12 ){
-        values[0] = String.valueOf(Integer.valueOf(values[0])-12);
+        values[0] = '0'+String.valueOf(Integer.valueOf(values[0])-12);
         hours = values[0];
         formattedTime = hours+':'+values[1]+' PM';
         return formattedTime;
