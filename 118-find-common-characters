@@ -1,0 +1,26 @@
+public List<String> commonChars(List<String> strs){
+    //solution here 
+    Integer strsSize = strs.size();
+    List<String> matchingCharacter = new List<String>();
+    List<String> splittedWords = new List<String>();
+    Map<String,Integer> wordsToCharMap = new Map<String,Integer>();
+    for(String str : strs){
+        splittedWords.addAll(str.split(''));
+    }
+
+    for(String character : splittedWords){
+        if(!wordsToCharMap.containsKey(character)){
+            wordsToCharMap.put(character,0);
+        }
+        Integer charOccurance = wordsToCharMap.get(character) + 1;
+        wordsToCharMap.put(character,charOccurance);
+    }
+
+    for(String character : wordsToCharMap.keySet()){
+        if(strsSize == wordsToCharMap.get(character)){
+            matchingCharacter.add(character);
+        }
+    }
+
+    return matchingCharacter;
+}
