@@ -1,9 +1,9 @@
 public List<String> commonChars(List<String> strs){
     //solution here 
-    Set<String> characters = new Set<String>();
+    List<String> characters = new List<String>();
     Set<String> commonCharacters = new Set<String>();
     for(String str : strs){
-        characters.add(new Set<String>{str.split('')});
+        characters.add(str.split(''));
     }
     for(String str : strs){
         for(String character : characters){
