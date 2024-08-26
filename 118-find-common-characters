@@ -7,7 +7,7 @@ public List<String> commonChars(List<String> strs){
     }
     for(String str : strs){
         for(String character : characters){
-            if(str.contains(characters)){
+            if(str.contains(character)){
                 commonCharacters.add(character);
             }
         }
