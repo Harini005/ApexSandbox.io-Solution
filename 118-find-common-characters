@@ -12,6 +12,6 @@ public List<String> commonChars(List<String> strs){
             }
         }
     }
-    return commonCharacters;
+    return new List<String>{commonCharacters};
    
 }
