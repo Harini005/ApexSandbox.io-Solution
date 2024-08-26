@@ -3,7 +3,7 @@ public List<String> commonChars(List<String> strs){
     Set<String> characters = new Set<String>();
     Set<String> commonCharacters = new Set<String>();
     for(String str : strs){
-        characters.add(str.split(''));
+        characters.add(new Set<String>{str.split('')});
     }
     for(String str : strs){
         for(String character : characters){
